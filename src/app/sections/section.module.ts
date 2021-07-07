@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SectionSalesComponent } from './section-sales/section-sales.component';
 import { SectionOrdersComponent } from './section-orders/section-orders.component';
 import { SectionHealthComponent } from './section-health/section-health.component';
+import { SectionRoutingModule } from './section-routing.module';
 
 
 
@@ -13,7 +14,13 @@ import { SectionHealthComponent } from './section-health/section-health.componen
     SectionHealthComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SectionRoutingModule
+  ],
+  exports:[
+    SectionSalesComponent,
+    SectionOrdersComponent,
+    SectionHealthComponent
   ]
 })
 export class SectionModule { }

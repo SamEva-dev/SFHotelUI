@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarModule } from './nav-bar/nav-bar.module';
+import { SectionModule } from './sections/section.module';
 //import { SidebarComponent } from './side-bar/component/sidebar.component';
 import { SideBarModule } from './side-bar/side-bar.module';
 
@@ -13,10 +14,13 @@ import { SideBarModule } from './side-bar/side-bar.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     SideBarModule,
-    //SidebarComponent,
-    NavBarModule
+    NavBarModule,
+    SectionModule,
+
+
+    /* Need to be alway the last in the imports array */
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

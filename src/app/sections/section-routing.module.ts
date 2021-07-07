@@ -6,17 +6,13 @@ import { SectionOrdersComponent } from './section-orders/section-orders.componen
 import { SectionHealthComponent } from './section-health/section-health.component';
 
 const routesChild: Routes = [
-  { path: 'sales', component: SectionSalesComponent },
-  { path: 'orders', component: SectionOrdersComponent},
-  { path: 'health', component: SectionHealthComponent},
-
  ]
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild(routesChild)
-  ]
+  ],
+  exports:[ RouterModule ]
 })
 export class SectionRoutingModule { }

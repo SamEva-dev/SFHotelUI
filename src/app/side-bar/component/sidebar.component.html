@@ -1,11 +1,11 @@
 <ul class="nav nav-pills flex-column">
-  <li class="nav-item">
-    <a class="nav-link" href="#"> Hotel 1</a>
+  <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <a class="nav-link" [routerLink]="['']"> Sales Volume</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link"  href="#"> Hotel 2</a>
+  <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <a class="nav-link"  [routerLink]="['/orders']"> Latest Orders</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link"  href="#"> Hotel 3</a>
+  <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+    <a class="nav-link"  [routerLink]="['/health']"> System Health</a>
   </li>
 </ul>
