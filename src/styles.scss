@@ -2,3 +2,31 @@
 @import "~bootswatch/dist/cyborg/variables"; // we use cyborg theme from https://bootswatch.com/
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/cyborg/bootswatch";
+//@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+*
+{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $font-family-sans-serif ;
+  height: 100%;
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+
+
+html{
+  height: 100%;
+}
+
+.shadow{
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2), 0 5px 6px rgba(0,0,0,0.3);
+}
+
+.section-container{
+  padding: 30px;
+}
+
