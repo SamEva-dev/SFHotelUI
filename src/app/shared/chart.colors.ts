@@ -1,0 +1,26 @@
+export const LINE_CHART_COLORS =[
+  {
+    backgroundColor:'rgba(6,214,160,0.2)',
+    borderColor:'rgba(0,200,140,0.5)',
+    pointBackgroundColor:'#000',
+    pointBorderColor:'#000',
+    pointHoverBackgroundColor:'#555',
+    pointHoverBorderColor:'#555'
+  },
+  {
+    backgroundColor:'rgba(16,114,260,0.2)',
+    borderColor:'rgba(240,180,80,0.5)',
+    pointBackgroundColor:'#000',
+    pointBorderColor:'#000',
+    pointHoverBackgroundColor:'#555',
+    pointHoverBorderColor:'#555'
+  },
+  {
+    backgroundColor:'rgba(1,24,60,0.2)',
+    borderColor:'rgba(230,20,40,0.5)',
+    pointBackgroundColor:'#000',
+    pointBorderColor:'#000',
+    pointHoverBackgroundColor:'#555',
+    pointHoverBorderColor:'#555'
+  }
+];
