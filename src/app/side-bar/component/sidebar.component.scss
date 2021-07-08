@@ -479,48 +479,6 @@ $img-shadow-color:rgba(0, 0, 0, 0.5);
   }
 
   // styles with background image
-  &.sidebar-bg {
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: $img-bg-sidebar-wrapper;
-    }
-
-    .sidebar-profile,
-    .sidebar-search,
-    .sidebar-menu {
-      border-top: 1px solid $img-border-color;
-    }
-
-    .sidebar-search input.search-menu,
-    .sidebar-search .input-group-text {
-      border-color: $img-border-color;
-      box-shadow: none;
-    }
-
-    .sidebar-menu ul li a i,
-    .sidebar-menu .sidebar-dropdown div,
-    .sidebar-search input.search-menu,
-    .sidebar-search .input-group-text {
-      background-color: $img-border-color;
-
-    }
-
-    .sidebar-footer {
-      background-color: $img-bg-footer;
-      box-shadow: 0px -1px 5px $img-bg-footer;
-      border-top: 1px solid $img-border-color;
-    }
-
-  }
+  
 
 }
