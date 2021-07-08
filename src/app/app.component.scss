@@ -1,10 +1,12 @@
-#sideBar{
-  height: 100vh;
-  padding-top: 80px;
-  //position: fixed;
-  background-color: #191F26;
-}
 
+
+#mainContent{
+  height: 100vh;
+  display: inline-block;
+    width: 100%;
+    padding-top: 20px;
+    transition: padding-left .3s ease;
+}
 #dashboard{
   margin-top: 60px;
 }
@@ -13,3 +15,6 @@
   background-color: #161A1E !important;
   box-shadow: 0 3px 6px rgb(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.3);
 }
+
+
+

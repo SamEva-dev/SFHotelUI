@@ -1,9 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { SidebarComponent } from './component/sidebar.component';
 import { SideBarRoutingModule } from './side-bar-routing.module';
 
 
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
@@ -11,8 +19,19 @@ import { SideBarRoutingModule } from './side-bar-routing.module';
   ],
   imports: [
     CommonModule,
-    SideBarRoutingModule
+    BsDropdownModule,
+    BsDropdownModule.forRoot(),
+    SideBarRoutingModule,
+    PerfectScrollbarModule,
+    BrowserAnimationsModule,
+
   ],
-  exports:[ SidebarComponent ]
+  exports:[ SidebarComponent ],
+  providers:[
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ]
 })
 export class SideBarModule { }

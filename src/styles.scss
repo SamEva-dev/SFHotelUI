@@ -3,6 +3,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/cyborg/bootswatch";
 //@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import 'material-icons/iconfont/material-icons.css';
 
 *
 {
@@ -20,6 +21,7 @@ body{
 
 html{
   height: 100%;
+
 }
 
 .shadow{
@@ -30,3 +32,27 @@ html{
   padding: 30px;
 }
 
+.card-theme{
+  background-color: #191F26;
+  border: none;
+  border-radius: 2px;
+}
+.card-heading-theme{
+  color:#eee;
+  border-top-right-radius:8px ;
+  border-top-left-radius: 8px;
+  padding:  12px;
+
+}
+.card-header.card-header-theme {
+  background-color: #161A1E !important;
+}
+.cards
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.section-container{
+  padding: 30px;
+}
