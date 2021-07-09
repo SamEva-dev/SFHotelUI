@@ -7,6 +7,7 @@ import { SectionOrdersComponent } from './section-orders/section-orders.componen
 import { SectionHealthComponent } from './section-health/section-health.component';
 import { SectionRoutingModule } from './section-routing.module';
 import { ChartModule } from '../chart/chart.module';
+import { ServerComponent } from './server/server.component';
 
 
 
@@ -15,7 +16,8 @@ import { ChartModule } from '../chart/chart.module';
   declarations: [
     SectionSalesComponent,
     SectionOrdersComponent,
-    SectionHealthComponent
+    SectionHealthComponent,
+    ServerComponent
   ],
   imports: [
     CommonModule,
