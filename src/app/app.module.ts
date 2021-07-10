@@ -9,10 +9,12 @@ import { SectionModule } from './sections/section.module';
 import { SideBarModule } from './side-bar/side-bar.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
