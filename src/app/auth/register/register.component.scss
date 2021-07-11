@@ -61,13 +61,23 @@
   width: 50%;
   cursor: pointer;
 }
-.register .nav-tabs{
+.mat-tab-labels{
   margin-top: 3%;
   border: none;
   background: #0062cc;
   border-radius: 1.5rem;
-  width: 28%;
+
   float: right;
+}
+.mat-tab-label-active{
+  width: 100px;
+  background-color: white;
+  color: #0062cc;
+  border: 2px solid #0062cc;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius:  1.5rem;
 }
 .register .nav-tabs .nav-link{
   padding: 2%;

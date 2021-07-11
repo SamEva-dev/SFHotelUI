@@ -8,9 +8,7 @@ import { SectionHealthComponent } from '../sections/section-health/section-healt
 const routesChild: Routes = [
   { path: 'sales', component: SectionSalesComponent },
   { path: 'orders', component: SectionOrdersComponent},
-  { path: 'health', component: SectionHealthComponent},
-  { path: '', component: SectionSalesComponent},
-  { path: '', redirectTo: '/sales', pathMatch: 'full' }
+  { path: 'health', component: SectionHealthComponent}
  ]
 
 @NgModule({
