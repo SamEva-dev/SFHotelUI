@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +25,11 @@ import { AuthModule } from './auth/auth.module';
     SectionModule,
     FontAwesomeModule,
     AuthModule,
+    BrowserAnimationsModule,
 
     /* Need to be alway the last in the imports array */
     AppRoutingModule,
 
-    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
