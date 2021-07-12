@@ -4,18 +4,16 @@
           <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
           <h3>Welcome</h3>
           <p>You are 30 seconds away from earning your own money!</p>
-          <input type="submit" name="" value="Login"/><br/>
+          <a [routerLink]="['/login']">Login</a>
       </div>
       <div class="col-md-9 register-right">
         <mat-tab-group
             mat-align-tabs="end"
             animationDuration="2000ms"
             [ngClass]="'first second'"
-            >
-          <div class="tab-content" id="myTabContent"
-
-          >
-          <mat-tab >
+        >
+          <div class="tab-content" id="myTabContent">
+            <mat-tab >
 
             <ng-template mat-tab-label appearance="red" >
               <span class="material-icons-outlined">
@@ -30,7 +28,7 @@
                   <div class="col-md-6">
                       <div class="form-group">
                           <input type="text" class="form-control" placeholder="First Name *" value="" />
-                      </div>
+                         </div>
                       <div class="form-group">
                           <input type="text" class="form-control" placeholder="Last Name *" value="" />
                       </div>

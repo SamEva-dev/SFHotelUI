@@ -4,7 +4,7 @@
           <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
           <h3>Welcome</h3>
           <p>You are 30 seconds away from earning your own money!</p>
-          <input type="submit" name="" value="Register"/><br/>
+          <a [routerLink]="['/register']">Register</a>
       </div>
       <div class="col-md-9 register-right">
 
@@ -15,32 +15,39 @@
                   <mat-card-title>Login</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
-                  <form>
-                    <div class="input-group form-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-
-                            <mat-icon>perm_identity</mat-icon>
-                        </span>
-                      </div>
-                      <input type="text" class="form-control" placeholder="username">
-
-                    </div>
-                    <div class="input-group form-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-
-                            <mat-icon>build</mat-icon>
-                        </span>
-                      </div>
-                      <input type="password" class="form-control" placeholder="password">
-                    </div>
-                    <div class="row align-items-center remember">
-                      <input type="checkbox">Remember Me
+                  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                    <div class="form-group">
+                      <label for="email">Email address:</label>
+                      <input type="email"
+                            class="form-control"
+                            id="email"
+                            ngModel
+                            name="userName"
+                            #userName="ngModel"
+                            required
+                            placeholder="Entrer votre adresse email">
                     </div>
                     <div class="form-group">
-                      <input type="submit" value="Login" class="btn float-right login_btn">
+                      <label for="password">Password:</label>
+                      <input type="password"
+                            class="form-control"
+                            id="password"
+                            ngModel
+                            name="userPassword"
+                            #userPassword="ngModel"
+                            required
+                            placeholder="Entrer votre mot de passe">
                     </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <span class="spacer"></span>
+                    <div class="form-group form-check">
+                      <a [routerLink]="['/reset-password']" > Mot de passe oublié</a>
+                    </div>
+                    <button type="submit"
+                          class="btn btn-default"
+                            [disabled]="f.invalid">Connexion</button>
                   </form>
                 </mat-card-content>
                 <mat-card-actions>
