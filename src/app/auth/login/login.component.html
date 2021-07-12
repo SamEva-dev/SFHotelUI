@@ -7,123 +7,47 @@
           <input type="submit" name="" value="Register"/><br/>
       </div>
       <div class="col-md-9 register-right">
-        <mat-tab-group
-            mat-align-tabs="end"
-            animationDuration="2000ms"
-            [ngClass]="'first second'"
-            >
-          <div class="tab-content" id="myTabContent"
 
-          >
-          <mat-tab >
+          <div class="tab-content" id="myTabContent">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Login</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <form>
+                    <div class="input-group form-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
 
-            <ng-template mat-tab-label appearance="red" >
-              <span class="material-icons-outlined">
-                perm_identity
-                </span>
-              Particular
-            </ng-template>
+                            <mat-icon>perm_identity</mat-icon>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="username">
 
-            <div class="tab-pane fade show active example-small-box mat-elevation-z4" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <h3 class="register-heading">Apply as a Employee</h3>
-              <div class="row register-form">
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="First Name *" value="" />
+                    </div>
+                    <div class="input-group form-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+
+                            <mat-icon>build</mat-icon>
+                        </span>
                       </div>
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                      </div>
-                      <div class="form-group">
-                          <input type="password" class="form-control" placeholder="Password *" value="" />
-                      </div>
-                      <div class="form-group">
-                          <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
-                      </div>
-                      <div class="form-group">
-                          <div class="maxl">
-                              <label class="radio inline">
-                                  <input type="radio" name="gender" value="male" checked>
-                                  <span> Male </span>
-                              </label>
-                              <label class="radio inline">
-                                  <input type="radio" name="gender" value="female">
-                                  <span>Female </span>
-                              </label>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                      </div>
-                      <div class="form-group">
-                          <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
-                      </div>
-                      <div class="form-group">
-                          <select class="form-control">
-                              <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                              <option>What is your Birthdate?</option>
-                              <option>What is Your old Phone Number</option>
-                              <option>What is your Pet Name?</option>
-                          </select>
-                      </div>
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
-                      </div>
-                      <input type="submit" class="btnRegister"  value="Register"/>
-                  </div>
-              </div>
+                      <input type="password" class="form-control" placeholder="password">
+                    </div>
+                    <div class="row align-items-center remember">
+                      <input type="checkbox">Remember Me
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" value="Login" class="btn float-right login_btn">
+                    </div>
+                  </form>
+                </mat-card-content>
+                <mat-card-actions>
+                </mat-card-actions>
+              </mat-card>
           </div>
-          </mat-tab>
-          <mat-tab label="Professional">
-            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <h3  class="register-heading">Apply as a Hirer</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="`Answer *" value="" />
-                                        </div>
-                                        <input type="submit" class="btnRegister"  value="Register"/>
-                                    </div>
-                                </div>
-                            </div>
-          </mat-tab>
-          </div>
-        </mat-tab-group>
-    </div>
-
+      </div>
   </div>
 
-
-
+</div>

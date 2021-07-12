@@ -3,27 +3,29 @@ import { CommonModule } from '@angular/common';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
 
-import { SingInComponent } from './sing-in/sing-in.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 
 
 @NgModule({
   declarations: [
-    SingInComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     MatTabsModule,
     MatIconModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatCardModule
   ],
   exports:[]
 })
