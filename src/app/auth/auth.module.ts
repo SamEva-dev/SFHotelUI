@@ -12,6 +12,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 
@@ -21,7 +22,8 @@ import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
     RegisterComponent,
     LoginComponent,
     ResetPasswordComponent,
-    ConfirmEmailComponent
+    ConfirmEmailComponent,
+    ChangePasswordComponent
   ],
   imports: [
     CommonModule,

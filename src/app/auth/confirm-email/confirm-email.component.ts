@@ -28,7 +28,6 @@ export class ConfirmEmailComponent implements OnInit {
       console.log(error);
       this.emailConfirmed = false;
     });
-    
   }
 
 }
