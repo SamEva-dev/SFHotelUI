@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
 
 
 
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     RegisterComponent,
     LoginComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ConfirmEmailComponent
   ],
   imports: [
     CommonModule,

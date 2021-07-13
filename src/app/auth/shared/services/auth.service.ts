@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthService {
   private authtUrl = environment.BASE_URL + 'api/v1/auth';
-  private confirmEmailRul = this.authtUrl;
+  private confirmEmailRul = environment.BASE_URL + 'api/v1/auth/confirmEmail';
 
   constructor(private http: HttpClient) { }
 
@@ -35,4 +35,22 @@ export class AuthService {
 
     return this.http.post(this.authtUrl+'/register',model,optionRequete);
   }
+
+  resetPassword(model : any){
+    const optionRequete = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin':'*',
+        'confrimEmailUrl':this.confirmEmailRul
+      })
+    };
+
+    return this.http.post(this.authtUrl+'/resetPassword',model,optionRequete);
+  }
+
+
+
+  confirmEmail(model:any){
+    return this.http.post(this.authtUrl+'confirmEmail', model);
+  }
+
 }

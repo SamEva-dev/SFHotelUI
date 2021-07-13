@@ -1,12 +1,12 @@
-<div class="container register">
+<div class="container authentification">
   <div class="row">
-      <div class="col-md-3 register-left">
+      <div class="col-md-3 authentification-left">
           <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
           <h3>Welcome</h3>
           <p>You are 30 seconds away from earning your own money!</p>
-          <a [routerLink]="['/login']">Login</a>
+          <a [routerLink]="['/login']" class="btn btn-primary">Login</a>
       </div>
-      <div class="col-md-9 register-right">
+      <div class="col-md-9 authentification-right">
         <mat-tab-group
             mat-align-tabs="end"
             animationDuration="2000ms"
@@ -23,8 +23,8 @@
             </ng-template>
 
             <div class="tab-pane fade show active example-small-box mat-elevation-z4" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <h3 class="register-heading">S'enregistrer en tant que particulier</h3>
-              <div class="row register-form">
+              <h3 class="authentification-heading">S'enregistrer en tant que particulier</h3>
+              <div class="row authentification-form">
                 <form style="display: contents;" #f="ngForm" (ngSubmit)="onParticularSubmit(f)">
                   <div class="col-md-6">
                       <div class="form-group">
@@ -146,7 +146,7 @@
                                   #response=ngModel
                                   required />
                       </div>
-                      <input type="submit" class="btnRegister" [disabled]="f.invalid"  value="Register"/>
+                      <input type="submit" class="btnRegister" [disabled]="f.invalid"  value="authentification"/>
                   </div>
                 </form>
               </div>
@@ -154,8 +154,8 @@
           </mat-tab>
           <mat-tab label="Professional">
             <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <h3  class="register-heading">s'enregistrer en tant que Entreprise</h3>
-                <div class="row register-form">
+                <h3  class="authentification-heading">s'enregistrer en tant que Entreprise</h3>
+                <div class="row authentification-form">
                   <form style="display: contents;" #f="ngForm" (ngSubmit)="onCompagniSubmit(f)">
                     <div class="col-md-6">
 
@@ -248,7 +248,7 @@
                                     #response=ngModel
                                     required/>
                         </div>
-                        <input type="submit" class="btnRegister" [disabled]="f.invalid" value="Register"/>
+                        <input type="submit" class="btnRegister" [disabled]="f.invalid" value="authentification"/>
                     </div>
                     </form>
                 </div>
