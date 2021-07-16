@@ -12,7 +12,6 @@ import {NgProgressModule} from '@ngx-progressbar/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarModule } from './nav-bar/nav-bar.module';
 import { SectionModule } from './sections/section.module';
 import { SideBarModule } from './side-bar/side-bar.module';
 
@@ -21,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
 import { NavComponent } from './nav/nav.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -28,11 +28,11 @@ import { NavComponent } from './nav/nav.component';
     AppComponent,
     HomeComponent,
     NavComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
     SideBarModule,
-    NavBarModule,
     SectionModule,
     FontAwesomeModule,
     AuthModule,
