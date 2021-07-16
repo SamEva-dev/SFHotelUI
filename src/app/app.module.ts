@@ -21,7 +21,6 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
 import { NavComponent } from './nav/nav.component';
-import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
