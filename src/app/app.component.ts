@@ -3,6 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
+import { NgProgress } from '@ngx-progressbar/core';
+
 import { SidebarService } from './side-bar/shared/sidebar.service';
 
 

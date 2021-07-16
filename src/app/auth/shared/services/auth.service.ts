@@ -9,7 +9,8 @@ import { environment } from 'src/environments/environment';
 export class AuthService {
   private authtUrl = environment.BASE_URL + 'api/v1/auth';
   private confirmEmailUrl = environment.BASE_URL + '/confirm-email';
-  private changePasswordUrl = environment.BASE_URL + '/change-password';
+  private resetPasswordUrl = environment.BASE_URL + '/change-password';
+
   constructor(private http: HttpClient) { }
 
   login(model:any){
@@ -29,7 +30,7 @@ export class AuthService {
     const optionRequete = {
       headers: new HttpHeaders({
         'Access-Control-Allow-Origin':'*',
-        'confrimEmailUrl':this.confirmEmailUrl
+        'confirmationUrl':this.confirmEmailUrl
       })
     };
 
@@ -37,14 +38,14 @@ export class AuthService {
   }
 
   resetPassword(model : any){
-    const optionRequete = {
+    const optionRequeste = {
       headers: new HttpHeaders({
         'Access-Control-Allow-Origin':'*',
-        'confrimEmailUrl':this.confirmEmailUrl
+        'resetPasswordUrl':this.resetPasswordUrl
       })
     };
 
-    return this.http.post(this.authtUrl+'/resetPassword',model,optionRequete);
+    return this.http.post(this.authtUrl+'/resetPassword',model,optionRequeste);
   }
 
   confirmEmail(model:any){
@@ -52,7 +53,8 @@ export class AuthService {
   }
 
   changePassword(model:any){
-    return this.http.post(this.authtUrl+'changePassword', model);
+
+    return this.http.post(this.authtUrl+'changePassword',model);
   }
 
 }
