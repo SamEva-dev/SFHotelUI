@@ -1,75 +1,62 @@
 
-<!-- <app-navbar
-  id="navbar"
-    class="navbar navbar-dark fixed-top bg-dark">
-</app-navbar>
-<div class="container-fluid" >
-  <div class="row" id="mainContent">
-    <div class="col-sm-3 col-md-2 px-1 mt-5 py-2 d-none d-sm-block">
-      <app-sidebar ></app-sidebar>
-    </div>
-    <div class="col-sm-9 col-md-10  ml-sm-auto pt-3 " id="dashboard">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</div> -->
+<div class="bg">
 
+  <mat-toolbar>
 
-<mat-toolbar>
+    <button mat-icon-button *ngIf="sidenav.mode =='over'"
+    (click) = "sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+      close
+    </mat-icon>
+    </button>
 
-   <button mat-icon-button *ngIf="sidenav.mode =='over'"
-   (click) = "sidenav.toggle()">
-   <mat-icon *ngIf="!sidenav.opened">
-     menu
-   </mat-icon>
-   <mat-icon *ngIf="sidenav.opened">
-    close
-  </mat-icon>
-   </button>
+      <app-nav-bar class="spacer"></app-nav-bar>
 
-    <app-nav-bar></app-nav-bar>
+  </mat-toolbar>
 
-</mat-toolbar>
+  <mat-sidenav-container >
+    <mat-sidenav #sidenav="matSidenav" >
 
-<mat-sidenav-container >
-  <mat-sidenav #sidenav="matSidenav" >
-
-    <div class="sidebar-content">
-      <div class="sidebar-profile">
-        <div class="user-pic">
-          <img class="img-responsive img-rounded" src="../assets/img/user.jpg" alt="User picture">
-        </div>
-        <div class="user-info">
-          <span class="user-name">Sam
-            <strong>FOKAM</strong>
-          </span>
-          <span class="user-role">Administrator</span>
-          <span class="user-status">
-            <i class="fa fa-circle"></i>
-            <span>Online</span>
-          </span>
+      <div class="sidebar-content">
+        <div class="sidebar-profile">
+          <div class="user-pic">
+            <img class="img-responsive img-rounded" src="../assets/img/user.jpg" alt="User picture">
+          </div>
+          <div class="user-info">
+            <span class="user-name">Sam
+              <strong>FOKAM</strong>
+            </span>
+            <span class="user-role">Administrator</span>
+            <span class="user-status">
+              <i class="fa fa-circle"></i>
+              <span>Online</span>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <mat-divider></mat-divider>
-      <mat-expansion-panel (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
+      <mat-divider></mat-divider>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
 
-          <mat-panel-title class="menu-button" >
-            <mat-icon>leaderboard</mat-icon>
-              Dashboard
-          </mat-panel-title>
+            <mat-panel-title class="menu-button" >
+              <mat-icon>leaderboard</mat-icon>
+                Dashboard
+            </mat-panel-title>
 
-        </mat-expansion-panel-header>
-          <app-sidebar></app-sidebar>
-        </mat-expansion-panel>
+          </mat-expansion-panel-header>
+            <app-sidebar></app-sidebar>
+          </mat-expansion-panel>
 
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="content ">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content ">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

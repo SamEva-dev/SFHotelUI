@@ -21,6 +21,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
 import { NavComponent } from './nav/nav.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { DisplayComponent } from './display/display.component';
+import { VoterComponent } from './voter/voter.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+import { LabelComponent } from './label/label.component';
 
 
 @NgModule({
@@ -29,6 +33,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HomeComponent,
     NavComponent,
     NavBarComponent,
+    DisplayComponent,
+    VoterComponent,
+    TransactionDetailsComponent,
+    LabelComponent,
   ],
   imports: [
     BrowserModule,
