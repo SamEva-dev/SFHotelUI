@@ -13,6 +13,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 import {NgProgressModule} from '@ngx-progressbar/core';
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SectionModule } from './sections/section.module';
@@ -53,6 +55,8 @@ import { LabelComponent } from './label/label.component';
     NgProgressModule,
     LayoutModule,
 
+    CarouselModule,
+
     MatMenuModule,
 
     IvyCarouselModule,
@@ -76,6 +80,7 @@ import { LabelComponent } from './label/label.component';
   providers: [],
   exports:[IvyCarouselModule],
   bootstrap: [AppComponent],
+
 
 })
 export class AppModule { }
