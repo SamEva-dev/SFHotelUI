@@ -8,6 +8,7 @@ import { SectionHealthComponent } from './section-health/section-health.componen
 import { SectionRoutingModule } from './section-routing.module';
 import { ChartModule } from '../chart/chart.module';
 import { ServerComponent } from './server/server.component';
+import { MapsComponent } from './maps/maps.component';
 
 
 
@@ -18,7 +19,8 @@ import { ServerComponent } from './server/server.component';
     SectionSalesComponent,
     SectionOrdersComponent,
     SectionHealthComponent,
-    ServerComponent
+    ServerComponent,
+    MapsComponent
   ],
   imports: [
     CommonModule,

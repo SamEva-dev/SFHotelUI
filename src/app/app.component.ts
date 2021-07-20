@@ -17,7 +17,7 @@ export class AppComponent {
   title = 'SFHotelUI';
 @ViewChild(MatSidenav) sidenav! :MatSidenav;
 public menus:any[] = [];
-panelOpenState = false;
+
 constructor(private breakpointObserver: BreakpointObserver,
   public sidebarService: SidebarService) {
     this.menus = sidebarService.getMenuList();

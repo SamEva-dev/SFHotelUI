@@ -17,7 +17,9 @@ import { SidebarService } from '../shared/sidebar.service';
 export class SidebarComponent implements OnInit {
 
   public menus:any[] = [];
-  constructor(public sidebarService: SidebarService) {
+  isCollapsed = true;
+  panelOpenState = false;
+  constructor(public sidebarService: SidebarService,) {
     this.menus = sidebarService.getMenuList();
    }
 
@@ -50,5 +52,12 @@ export class SidebarComponent implements OnInit {
 
   hasBackgroundImage() {
     return this.sidebarService.hasBackgroundImage;
+  }
+
+  toggleSidebarPin() {
+    this.sidebarService.toggleSidebarPin();
+  }
+  toggleSidebar() {
+    this.sidebarService.toggleSidebar();
   }
 }

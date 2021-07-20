@@ -1,13 +1,26 @@
-  <perfect-scrollbar>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active" routerLinkActive="active" >
-      <a class="nav-link menu-button" [routerLink] = "['/sales']">Sales <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item active" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a class="nav-link" [routerLink] = "['/orders']">Orders <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item active" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a class="nav-link" [routerLink] = "['/health']">Health <span class="sr-only">(current)</span></a>
-    </li>
-    </ul>
-  </perfect-scrollbar>
+<mat-nav-list dense>
+<div class="sidebar-search pt-1 pb-1 pl-3 pr-3">
+  <input type="search" class="form-control rounded-pill" name="search" placeholder="Search ...">
+</div>
+<mat-expansion-panel [class.mat-elevation-z0]="true" dense
+                      (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+
+<mat-expansion-panel-header>
+
+  <mat-panel-title class="menu-button" >
+    <mat-icon>dashboard</mat-icon>
+      Dashboard
+  </mat-panel-title>
+
+</mat-expansion-panel-header>
+  <mat-nav-list dense>
+    <a mat-list-item routerLinkActive="active" [routerLink] = "['/sales']">Sales <span class="sr-only">(current)</span></a>
+    <a mat-list-item [routerLink] = "['/orders']">Orders <span class="sr-only">(current)</span></a>
+    <a mat-list-item [routerLink] = "['/health']">Health <span class="sr-only">(current)</span></a>
+  </mat-nav-list>
+</mat-expansion-panel>
+    <mat-list-item [routerLink] = "['/maps']"><mat-icon > my_location</mat-icon>Maps</mat-list-item>
+</mat-nav-list>
+
+

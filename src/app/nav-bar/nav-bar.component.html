@@ -6,42 +6,30 @@
     </a>
   </span>
   <span class="spacer"></span>
-  <div class="nav-menu justify-content-center ">
-  <ul class="navbar-nav  ">
-    <li class="nav-item"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact: true}"
-        >
-      <a class="nav-link" [routerLink]="['/login']"> Login </a>
-    </li>
-    <li class="nav-item"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact: true}"
-        >
-      <a class="nav-link" [routerLink]="['/register']"> Register </a>
-    </li>
-    <li class="nav-item"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact: true}"
-        >
-      <a class="nav-link" [routerLink]="['/reset-password']"> Reset Password </a>
-    </li>
-    <li class="nav-item dropdown" dropdown >
-      <a class="nav-link" dropdownToggle>
-        Welcome
-      </a>
-      <ul class="dropdown-menu dropdown-menu-right" *dropdownMenu>
-        <li><a class="nav-link" [routerLink]="['/reset-password']">
-            <span class="material-icons-outlined">
-              vpn_key
-            </span> Reset Password</a></li>
-        <li><a class="dropdown-item" ><span class="material-icons-outlined">
-              logout
-            </span>
-            Logout</a></li>
+  <div>
 
-      </ul>
-    </li>
-  </ul>
+    <button mat-icon-button matTooltip="Notifications">
+        <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="My Account" [matMenuTriggerFor]="accountMenu">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #accountMenu [overlapTrigger]="false" yPosition="below">
+        <button mat-menu-item [routerLink]="['/login']">
+            <mat-icon>person</mat-icon><span>Connexion</span>
+        </button>
+        <button mat-menu-item [routerLink]="['/register']">
+          <mat-icon>person</mat-icon><span>Register</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>help</mat-icon><span>Help</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>Logout
+        </button>
+    </mat-menu>
+    <span>Welcome</span>
 </div>
+
 </nav>
