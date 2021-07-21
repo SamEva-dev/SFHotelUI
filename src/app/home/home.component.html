@@ -1,16 +1,149 @@
-<section>
 
-  <p>icici</p>
+<p> home page</p>
+<section>
+  <div class="containers">
+    <div class="title">
+        <p>The Best booking of Hotel</p>
+        <h1><span>Best</span> Booker</h1>
+    </div>
+    <div class="row">
+      <div class="clol-md-3" >
+        <div class="card">
+          <div class="card-main">
+            <div class="discount">9%</div>
+            <div class="label label-green">Pre-Order</div>
+            <div class="hotel-containter">
+              <div class="p" (mouseover)="changeImage($event)" ><img src="../../assets/img/h1.jpg" alt="Hotel"></div>
+              <div class="p" (mouseover)="changeImage($event)"><img src="../../assets/img/h2.jpg" alt="Hotel"></div>
+              <div class="p" (mouseover)="changeImage($event)"><img src="../../assets/img/h3.jpg" alt="Hotel"></div>
+            </div>
+            <div class="image">
+              <img src="{{urlImage}}" alt="Image">
+            </div>
+            <div class="cart-line"></div>
+            <div class="cart-item">
+              <ul>
+                <li> <a href="#"> <i class="fa fa-shopping-basket"></i></a> </li>
+                <li> <a href="#"> <i class="fa fa-heart"></i></a> </li>
+                <li> <a href="#"> <i class="fa fa-search"></i></a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="content">
+            <a href="#">Incidid Tongue bar</a>
+            <div class="rating">
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p><span class="money">£81.00</span><span class="old-price"> £80.00</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="clol-md-3">
+        <div class="card">
+          <div class="card-main">
+            <div class="discount">9%</div>
+            <div class="label label-green">Pre-Order</div>
+            <div class="hotel-containter">
+              <div class="p" (mouseover)="changeImage($event)" ><img src="../../assets/img/h1.jpg" alt="Hotel"></div>
+              <div class="p" (mouseover)="changeImage($event)"><img src="../../assets/img/h2.jpg" alt="Hotel"></div>
+              <div class="p" (mouseover)="changeImage($event)"><img src="../../assets/img/h3.jpg" alt="Hotel"></div>
+            </div>
+            <div class="image">
+              <img src="{{urlImage}}" alt="Image">
+            </div>
+            <div class="cart-line"></div>
+            <div class="cart-item">
+              <ul>
+                <li> <a href="#"> <i class="fa fa-shopping-basket"></i></a> </li>
+                <li> <a href="#"> <i class="fa fa-heart"></i></a> </li>
+                <li> <a href="#"> <i class="fa fa-search"></i></a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="content">
+            <a href="#">Incidid Tongue bar</a>
+            <div class="rating">
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p><span class="money">£81.00</span><span class="old-price"> £80.00</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="clol-md-3">
+        <div class="card">
+          <div class="card-main">
+            <div class="discount">9%</div>
+            <div class="label label-green">Pre-Order</div>
+            <div class="hotel-containter">
+              <div class="p" (mouseover)="changeImage($event)" ><img src="../../assets/img/h1.jpg" alt="Hotel"></div>
+              <div class="p" (mouseover)="changeImage($event)"><img src="../../assets/img/h2.jpg" alt="Hotel"></div>
+              <div class="p" (mouseover)="changeImage($event)"><img src="../../assets/img/h3.jpg" alt="Hotel"></div>
+            </div>
+            <div class="image">
+              <img src="{{urlImage}}" alt="Image">
+            </div>
+            <div class="cart-line"></div>
+            <div class="cart-item">
+              <ul>
+                <li> <a href="#"> <i class="fa fa-shopping-basket"></i></a> </li>
+                <li> <a href="#"> <i class="fa fa-heart"></i></a> </li>
+                <li> <a href="#"> <i class="fa fa-search"></i></a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="content">
+            <a href="#">Incidid Tongue bar</a>
+            <div class="rating">
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p><span class="money">£81.00</span><span class="old-price"> £80.00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<carousel>
+  <div class="carousel-cell">
+    <img src="../../assets/img/h1.jpg">
+  </div>
+  <div class="carousel-cell">
+    <img src="../../assets/img/h2.jpg">
+  </div>
+  <div class="carousel-cell">
+    <img src="../../assets/img/h3.jpg">
+  </div>
+  <div class="carousel-cell">
+    <img src="../../assets/img/h4.jpg">
+  </div>
+  <div class="carousel-cell">
+    <img src="../../assets/img/h5.jpg">
+  </div>
+
+</carousel>
 
 
-<section>
+<section class="partners">
+    <div class="containers">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide><strong>Partner 1</strong></ng-template>
+        <ng-template carouselSlide><strong>Partner 2</strong></ng-template>
+        <ng-template carouselSlide><strong>Partner 3</strong></ng-template>
+        <ng-template carouselSlide><strong>Partner 4</strong></ng-template>
+        <ng-template carouselSlide><strong>Partner 5</strong></ng-template>
+      </owl-carousel-o>
+    </div>
 
-  <p>laba</p>
-</section>
-
-
-<section>
-
-  <p>parla</p>
 </section>
