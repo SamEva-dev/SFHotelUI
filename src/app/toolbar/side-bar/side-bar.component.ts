@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToolbarService } from '../shared/services/toolbar.service';
 
 @Component({
@@ -20,7 +21,8 @@ export class SideBarComponent implements OnInit {
   public menus:any[] = [];
   isCollapsed = true;
   panelOpenState = false;
-  constructor(private toolbarService: ToolbarService) {
+  constructor(private toolbarService: ToolbarService,
+    private router: Router,) {
     this.menus = toolbarService.getMenuList();
    }
 
@@ -60,6 +62,10 @@ export class SideBarComponent implements OnInit {
   }
   toggleSidebar() {
     this.toolbarService.toggleSidebar();
+  }
+
+  gotoDashboard(){
+    this.router.navigate(['/dashboard']);
   }
 
 }

@@ -29,6 +29,7 @@ import { VoterComponent } from './CodeIngame/voter/voter.component';
 import { TransactionDetailsComponent } from './CodeIngame/transaction-details/transaction-details.component';
 import { LabelComponent } from './CodeIngame/label/label.component';
 import { ToolbarModule } from './toolbar/toolbar.module';
+import { HomeComponentModule } from './home-component/home-component.module';
 
 
 
@@ -51,6 +52,7 @@ import { ToolbarModule } from './toolbar/toolbar.module';
     BrowserAnimationsModule,
     NgProgressModule,
     LayoutModule,
+    HomeComponentModule,
 
     CarouselModule,
 

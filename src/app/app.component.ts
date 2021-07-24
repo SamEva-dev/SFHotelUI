@@ -12,6 +12,7 @@ import { ToolbarService } from './toolbar/shared/services/toolbar.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'SFHotelUI';
 @ViewChild(MatSidenav) sidenav! :MatSidenav;

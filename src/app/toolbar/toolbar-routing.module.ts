@@ -5,12 +5,14 @@ import { SectionOrdersComponent } from '../sections/section-orders/section-order
 import { SectionHealthComponent } from '../sections/section-health/section-health.component';
 import { MapsComponent } from '../sections/maps/maps.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from '../sections/dashboard/dashboard.component';
 
 const routesChild: Routes = [
   { path: 'sales', component: SectionSalesComponent },
   { path: 'orders', component: SectionOrdersComponent},
   { path: 'health', component: SectionHealthComponent},
-  { path: 'maps', component: MapsComponent}
+  { path: 'maps', component: MapsComponent},
+  { path: 'dashboard', component: DashboardComponent}
  ]
 
 

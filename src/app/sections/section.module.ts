@@ -9,6 +9,7 @@ import { SectionRoutingModule } from './section-routing.module';
 import { ChartModule } from '../chart/chart.module';
 import { ServerComponent } from './server/server.component';
 import { MapsComponent } from './maps/maps.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -20,7 +21,8 @@ import { MapsComponent } from './maps/maps.component';
     SectionOrdersComponent,
     SectionHealthComponent,
     ServerComponent,
-    MapsComponent
+    MapsComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

@@ -8,6 +8,7 @@
 
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 *
 {
   box-sizing: border-box;
@@ -22,7 +23,7 @@ body{
   font-family: $font-family-sans-serif ;
   height: 100%;
 
-  background-color: $body-bg;
+  background-color: #282f48;// $body-bg;
   color: $body-color;
   font-size: 15px;
 }
@@ -41,6 +42,12 @@ body{
 
 .shadow{
   box-shadow: 0 8px 12px rgba(0,0,0,0.2), 0 5px 6px rgba(0,0,0,0.3);
+}
+
+.card-shadow{
+  border-radius: 10px;
+  //box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2), 0 5px 6px rgba(0,0,0,0.3);;
 }
 
 .section-container{
@@ -68,6 +75,18 @@ body{
   flex-direction: column;
 }
 
+/***************Home page*/
+.card{
+  transition: all .2s ease-in-out;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
+/****************************/
 
 a{
   color: white;
@@ -286,3 +305,9 @@ a {
   color: #b3b3b3
 }
 
+/**** Nav bar/ siude bar*******************/
+.navbar-search{
+  background: #282f48;
+  color: #6e7899;
+
+}

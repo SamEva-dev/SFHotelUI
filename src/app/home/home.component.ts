@@ -1,5 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+
+const HOTEL=[
+  {
+    id:1,
+    name:"Hotel Hilton",
+    newPrice:81.00,
+    oldPrice:80.00,
+    imgPrincipal:"../../assets/img/h1.jpg",
+    discount:9,
+    imgs:["../../assets/img/h2.jpg","../../assets/img/h3.jpg","../../assets/img/h4.jpg"]
+  },
+  {
+    id:2,
+    name:"Hotel Continental",
+    newPrice:90.00,
+    oldPrice:70.00,
+    imgPrincipal:"../../assets/img/h2.jpg",
+    discount:10,
+    imgs:["../../assets/img/h1.jpg","../../assets/img/h3.jpg","../../assets/img/h5.jpg"]
+  },
+  {
+    id:3,
+    name:"Hotel Palace",
+    newPrice:71.00,
+    oldPrice:70.00,
+    imgPrincipal:"../../assets/img/h3.jpg",
+    discount:7,
+    imgs:["../../assets/img/h2.jpg","../../assets/img/h1.jpg","../../assets/img/h4.jpg"]
+  }
+]
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,6 +39,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 
 export class HomeComponent implements OnInit {
 
+  hotels = HOTEL;
    PARTNERS_ARRAY:any=[
     {
       imgName:"../../assets/img/h5.jpg"
@@ -53,8 +84,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeImage(img:any){
-    this.urlImage = img.target.src;
-  }
+ 
 
 }
