@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class SidebarService {
+export class ToolbarService {
 
   toggled = false;
   _hasBackgroundImage = true;
@@ -81,7 +81,7 @@ export class SidebarService {
       isSidebarToggeled: this.isSidebarToggeled
     }
   }
-  
+
   toggle() {
     this.toggled = ! this.toggled;
   }

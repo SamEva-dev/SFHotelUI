@@ -1,11 +1,11 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { SidebarService } from '../shared/sidebar.service';
+import { ToolbarService } from '../shared/services/toolbar.service';
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss'],
   animations: [
     trigger('slide', [
       state('up', style({ height: 0 })),
@@ -14,19 +14,20 @@ import { SidebarService } from '../shared/sidebar.service';
     ])
   ]
 })
-export class SidebarComponent implements OnInit {
+
+export class SideBarComponent implements OnInit {
 
   public menus:any[] = [];
   isCollapsed = true;
   panelOpenState = false;
-  constructor(public sidebarService: SidebarService,) {
-    this.menus = sidebarService.getMenuList();
+  constructor(private toolbarService: ToolbarService) {
+    this.menus = toolbarService.getMenuList();
    }
 
   ngOnInit(): void {
   }
   getSideBarState() {
-    return this.sidebarService.getSidebarState();
+    return this.toolbarService.getSidebarState();
   }
 
   toggle(currentMenu:any) {
@@ -51,13 +52,14 @@ export class SidebarComponent implements OnInit {
   }
 
   hasBackgroundImage() {
-    return this.sidebarService.hasBackgroundImage;
+    return this.toolbarService.hasBackgroundImage;
   }
 
   toggleSidebarPin() {
-    this.sidebarService.toggleSidebarPin();
+    this.toolbarService.toggleSidebarPin();
   }
   toggleSidebar() {
-    this.sidebarService.toggleSidebar();
+    this.toolbarService.toggleSidebar();
   }
+
 }

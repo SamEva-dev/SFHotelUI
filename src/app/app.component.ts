@@ -3,9 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
-import { NgProgress } from '@ngx-progressbar/core';
 
-import { SidebarService } from './side-bar/shared/sidebar.service';
+import { ToolbarService } from './toolbar/shared/services/toolbar.service';
 
 
 @Component({
@@ -19,8 +18,8 @@ export class AppComponent {
 public menus:any[] = [];
 
 constructor(private breakpointObserver: BreakpointObserver,
-  public sidebarService: SidebarService) {
-    this.menus = sidebarService.getMenuList();
+  public toolbarService: ToolbarService) {
+    this.menus = toolbarService.getMenuList();
   }
   isExpanded :boolean = false;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -43,7 +42,7 @@ ngAfterViewInit(){
   );
 }
 getSideBarState() {
-  return this.sidebarService.getSidebarState();
+  return this.toolbarService.getSidebarState();
 }
 
 toggle(currentMenu:any) {
@@ -68,7 +67,7 @@ getState(currentMenu:any) {
 }
 
 hasBackgroundImage() {
-  return this.sidebarService.hasBackgroundImage;
+  return this.toolbarService.hasBackgroundImage;
 }
 
 }

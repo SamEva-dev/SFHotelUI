@@ -19,18 +19,16 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SectionModule } from './sections/section.module';
-import { SideBarModule } from './side-bar/side-bar.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './home/home.component';
 
 import { AuthModule } from './auth/auth.module';
-import { NavComponent } from './nav/nav.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { DisplayComponent } from './display/display.component';
-import { VoterComponent } from './voter/voter.component';
-import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
-import { LabelComponent } from './label/label.component';
+import { DisplayComponent } from './CodeIngame/display/display.component';
+import { VoterComponent } from './CodeIngame/voter/voter.component';
+import { TransactionDetailsComponent } from './CodeIngame/transaction-details/transaction-details.component';
+import { LabelComponent } from './CodeIngame/label/label.component';
+import { ToolbarModule } from './toolbar/toolbar.module';
 
 
 
@@ -39,8 +37,6 @@ import { LabelComponent } from './label/label.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    NavComponent,
-    NavBarComponent,
     DisplayComponent,
     VoterComponent,
     TransactionDetailsComponent,
@@ -48,7 +44,7 @@ import { LabelComponent } from './label/label.component';
   ],
   imports: [
     BrowserModule,
-    SideBarModule,
+    ToolbarModule,
     SectionModule,
     FontAwesomeModule,
     AuthModule,

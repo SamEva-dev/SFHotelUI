@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { SectionSalesComponent } from '../sections/section-sales/section-sales.component';
 import { SectionOrdersComponent } from '../sections/section-orders/section-orders.component';
 import { SectionHealthComponent } from '../sections/section-health/section-health.component';
 import { MapsComponent } from '../sections/maps/maps.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const routesChild: Routes = [
   { path: 'sales', component: SectionSalesComponent },
@@ -13,13 +13,13 @@ const routesChild: Routes = [
   { path: 'maps', component: MapsComponent}
  ]
 
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild(routesChild),
-  ]
-  ,
+  ],
   exports:[ RouterModule ]
 })
-export class SideBarRoutingModule { }
+export class ToolbarRoutingModule { }

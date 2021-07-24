@@ -1,40 +1,46 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { SidebarComponent } from './component/sidebar.component';
-import { SideBarRoutingModule } from './side-bar-routing.module';
 
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ToolbarRoutingModule } from './toolbar-routing.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
+
 @NgModule({
   declarations: [
-    SidebarComponent
+    SideBarComponent,
+    NavBarComponent,
+
   ],
   imports: [
     CommonModule,
-    BsDropdownModule,
-    BsDropdownModule.forRoot(),
-    SideBarRoutingModule,
-    PerfectScrollbarModule,
-    BrowserAnimationsModule,
     MatExpansionModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    PerfectScrollbarModule,
+    BsDropdownModule,
+    MatMenuModule,
 
+    ToolbarRoutingModule,
   ],
-  exports:[ SidebarComponent ],
+  exports:[
+    SideBarComponent,
+    NavBarComponent
+  ],
   providers:[
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
@@ -42,4 +48,4 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     }
   ]
 })
-export class SideBarModule { }
+export class ToolbarModule { }
