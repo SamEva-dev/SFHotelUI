@@ -1,0 +1,29 @@
+footer{
+  padding: 20px 0;
+  background: #111;
+}
+footer p{
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+}
+
+footer p a{
+  color: #fff;
+  transition: all .3s ease;
+}
+
+footer p a:hover{
+  text-decoration: none;
+  color: #ff4000;
+}
+
+.footer-top{
+  padding: 50px 0;
+  background: #111;
+}
+
+.footer-middle{
+  padding: 50px 0;
+  background: #1d1dd1;
+}

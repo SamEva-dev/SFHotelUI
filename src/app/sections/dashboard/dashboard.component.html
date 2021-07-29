@@ -1,0 +1,151 @@
+<div>
+  <h4 class="mb-4 text-muted">Dashboard </h4>
+
+  <div class="row" >
+    <div *ngFor="let stat of statistique" class="col-md-6 col-lg-3 mb-4" >
+      <div class="card card-shadow ">
+        <div class="card-body">
+          <div class="card-innerBody d-flex align-items-center">
+            <div class="card-icon text-light">
+              <i  class="{{stat.icon}} stat-icon" aria-hidden="true"></i>
+            </div>
+            <div class="ml-auto">
+              <p class="card-label text-right text-muted">{{stat.name}}</p>
+              <h4 class="card-text text-right ">{{stat.price | currency:'EUR'}}</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex ">
+          <small class="text-muted periode">{{stat.periode}}</small>
+          <small class="text-success ml-auto">
+            <i class="fa fa-caret-up" aria-hidden="true"></i>
+            {{stat.ratting | percent}}
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12 col-xl-6 mb-4">
+      <div class="card card-shadow">
+        <div class="card-title mb-1 p-3 d-flex">
+          <h6>Chart Line</h6>
+          <a class="btn ml-auto p-0 text-lightning"> <i class="fas fa-ellipsis-h"></i> </a>
+        </div>
+        <div class="card-body">
+          <div class="chart-container" style="position: relative;">
+            <app-line-chart></app-line-chart>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-xl-6 mb-4">
+      <div class="card card-shadow">
+        <div class="card-title mb-1 p-3 d-flex">
+          <h6>Chart Bar</h6>
+          <a class="btn ml-auto p-0 text-lightning"> <i class="fas fa-ellipsis-h"></i> </a>
+        </div>
+        <div class="card-body">
+          <div class="chart-container" style="position: relative;">
+            <app-bar-chart></app-bar-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-xl-4 mb-4 align-items-stretch">
+      <div class="card h-100 card-shadow">
+        <div class="card-title mb-1 p-3 d-flex">
+          <h6>Chart Doughnut</h6>
+          <a class="btn ml-auto p-0 text-lightning"> <i class="fas fa-ellipsis-h"></i> </a>
+        </div>
+        <div class="card-body">
+          <div class="chart-container d-flex h-100 align-items-center justify-content-center" style="position: relative;">
+            <canvas id="chart-doughnut" style="height:100%"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="legend d-flex just">
+            <div class="flex-fill text-center"><span class="d-inline-block rounded-circle mr-2"
+                style="background: #5b6582;"></span><small>HTML</small></div>
+            <div class="flex-fill text-center"><span class="d-inline-block rounded-circle mr-2"
+                style="background: #98a4c7;"></span><small>CSS</small></div>
+            <div class="flex-fill text-center"><span class="d-inline-block rounded-circle mr-2"
+                style="background: #36a2eb;"></span><small>Javascript</small></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-xl-8 mb-4 align-items-stretch">
+      <div class="card h-100 card-shadow">
+        <div class="card-title mb-1 p-3 d-flex">
+          <h6>Booking</h6>
+          <a class="btn ml-auto p-0 text-lightning"> <i class="fas fa-ellipsis-h"></i> </a>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive-md">
+            <div class="table-responsive">
+              <table class="table ">
+                <thead>
+                  <tr>
+                    <th style="width:40%;">Hotel</th>
+                    <th class="number">Price</th>
+                    <th style="width:20%;">Date</th>
+                    <th style="width:20%;">State</th>
+                    <th class="actions" style="width:5%;"></th>
+                  </tr>
+                </thead>
+                <tbody class="no-border-x">
+                  <tr>
+                    <td>Hotel Hilton</td>
+                    <td class="number">$149</td>
+                    <td>Aug 23, 2018</td>
+                    <td class="text-success">Completed</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Continental Hotel</td>
+                    <td class="number">$535</td>
+                    <td>Aug 20, 2018</td>
+                    <td class="text-success">Completed</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Djega Palace</td>
+                    <td class="number">$583</td>
+                    <td>Aug 18, 2018</td>
+                    <td class="text-warning">Pending</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Hotel de Ville</td>
+                    <td class="number">$350</td>
+                    <td>Aug 15, 2018</td>
+                    <td class="text-warning">Pending</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Franco Hotel</td>
+                    <td class="number">$495</td>
+                    <td>Aug 13, 2018</td>
+                    <td class="text-danger">Cancelled</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

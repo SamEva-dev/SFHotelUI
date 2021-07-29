@@ -5,7 +5,7 @@
         <h1><span>Best</span> Booker</h1>
     </div>
     <div class="row">
-      <div class="col-md-4 col-lg-3 mb-4"  *ngFor="let item of hotels">
+      <div class="col-md-4 col-lg-3 mb-1"  *ngFor="let item of hotels">
         <app-hotels [hotel]="item"></app-hotels>
       </div>
     </div>
@@ -54,229 +54,27 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <div class="policy-p-card card-shadow">
-          <div class="date">
-            <h3>25</h3>
-            <h4>Jun</h4>
-          </div>
-          <div class="policy-img">
-            <img src="../../assets/img/h1.jpg" alt="H1">
-          </div>
-          <h2>Qu'est-ce que le Lorem Ipsum?</h2>
-           <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-            Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
-            ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
-          </p>
-          <a href="#" class="read-more">Read more <i class="fa fa-caret-right"></i></a>
-        </div>
-
+      <div class="col-md-4 col-lg-3 mb-1" *ngFor="let item of hotels">
+        <app-hotel-details [hotel] = "item"></app-hotel-details>
       </div>
-      <div class="col-md-4">
-        <div class="policy-p-card card-shadow">
-          <div class="date">
-            <h3>26</h3>
-            <h4>Jun</h4>
-          </div>
-          <div class="policy-img">
-            <img src="../../assets/img/h2.jpg" alt="H1">
-          </div>
-          <h2>Qu'est-ce que le Lorem Ipsum?</h2>
-           <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-            Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
-            ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
-          </p>
-          <a href="#" class="read-more">Read more <i class="fa fa-caret-right"></i></a>
-        </div>
 
-      </div>
-      <div class="col-md-4">
-        <div class="policy-p-card card-shadow">
-          <div class="date">
-            <h3>27</h3>
-            <h4>Jun</h4>
-          </div>
-          <div class="policy-img">
-            <img src="../../assets/img/h3.jpg" alt="H1">
-          </div>
-          <h2>Qu'est-ce que le Lorem Ipsum?</h2>
-           <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-            Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
-            ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
-          </p>
-          <a href="#" class="read-more">Read more <i class="fa fa-caret-right"></i></a>
-        </div>
-
-      </div>
     </div>
   </div>
 
 </section>
 
-<!-- <section class="partners">
+<section class="partners">
   <div class="container">
     <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide><strong>Partner 1</strong></ng-template>
-      <ng-template carouselSlide><strong>Partner 2</strong></ng-template>
-      <ng-template carouselSlide><strong>Partner 3</strong></ng-template>
-      <ng-template carouselSlide><strong>Partner 4</strong></ng-template>
-      <ng-template carouselSlide><strong>Partner 5</strong></ng-template>
+      <ng-template carouselSlide><strong><img src="../../assets/patners/p1.png"></strong></ng-template>
+      <ng-template carouselSlide><strong><img src="../../assets/patners/p2.png"></strong></ng-template>
+      <ng-template carouselSlide><strong><img src="../../assets/patners/p3.png"></strong></ng-template>
+      <ng-template carouselSlide><strong><img src="../../assets/patners/p4.png"></strong></ng-template>
+      <ng-template carouselSlide><strong><img src="../../assets/patners/p5.png"></strong></ng-template>
     </owl-carousel-o>
   </div>
 
-</section> -->
-<section class="footer-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 shadow">
-        <h2>SF HOTEL</h2>
-          <div class="footer-top-menu">
-            <ul>
-              <li>
-                <i class="fa fa-home"></i>
-                <span class="heading">Address</span>
-                <span class="address"> 54 Avenue du Ray, 06100 Nice</span>
-              </li>
-              <li>
-                <i class="fa fa-envelope"></i>
-                <span class="heading">Mail Us: </span>
-                <span class="email">
-                  <a href="mailto:sam.fokam@gmail.com">sam.fokam@gmail.com</a>
-                </span>
-              </li>
-              <li>
-                <i class="fa fa-phone"></i>
-                <span class="heading"> Phone: </span>
-                <span class="number">
-                  <a href="tel:+33634436437"> (+33)6 34 43 64 37 </a>
-                </span>
-              </li>
-              <li>
-                <a href="">
-                  <img src="../../assets/payment/logos_payment2.png" alt="Payment">
-                </a>
-              </li>
-            </ul>
-          </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="footer-all-menu">
-          <h2>Mon Compte</h2>
-          <ul>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Information</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Order History</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">My Wishlist</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Privacy Policy</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Site Map</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="footer-all-menu">
-          <h2>Information</h2>
-          <ul>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Cart</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Product Support</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">PC Setup & Support</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Services</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Extended Services Plans</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-md-2">
-        <div class="footer-all-menu">
-          <h2>Our Services</h2>
-          <ul>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">About</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Shipping Guide</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Store Location</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Affiliates</a>
-            </li>
-            <li>
-              <i class="fa fa-circle"></i>
-              <a href="">Customer Point Policy</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
+<app-footer></app-footer>
 
-<section class="footer-middle">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>sign up for our exclusive Newletter</h2>
-      </div>
-      <div class="col-md-4">
-        <input type="mail" class="input" placeholder="Email">
-        <button type="button" class="btn">
-          <i class="fa fa-location-arrow"></i>
-        </button>
-      </div>
-      <div class="col-md-4">
-          <div class="social text-center">
-            <ul>
-              <li><a href=""><i class="fa fa-facebook"></i></a></li>
-              <li><a href=""><i class="fa fa-twitter"></i></a></li>
-              <li><a href=""><i class="fa fa-pinterest"></i></a></li>
-              <li><a href=""><i class="fa fa-instagram"></i></a></li>
-              <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="containers text-center">
-    <p>@ 2021 SFHotel Designed by <a href="#">Creative Developper</a> All Rights Reserve</p>
-  </div>
-</footer>
 

@@ -1,0 +1,37 @@
+
+.stat-icon{
+  color: #6e7899;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 3rem;
+    cursor:pointer;
+}
+
+
+.stat-icon:hover{
+  color: #ff4000;
+  cursor:pointer;
+}
+
+.card-statistique h4:hover{
+  color: #ff4000;
+  cursor:pointer;
+}
+
+.card-footer .periode{
+  color: #fff;
+  font-weight: 700;
+}
+.card-statistique p{
+  transition: all .3s ease;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 12px 0 5px;
+
+}
+
+

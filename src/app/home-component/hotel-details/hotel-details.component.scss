@@ -1,0 +1,112 @@
+
+.policy-p-card{
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  border-bottom: 1 px solid #a8a8a8;
+  position: relative;
+  top: -50px;
+}
+
+
+.date{
+  position: absolute;
+  top: 0;
+  left: 30px;
+  z-index: 2;
+  background: #ff4000;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 0 0 4px 4px;
+}
+
+.date h3{
+ font-size: 28px;
+ font-weight: 700;
+ color: #fff;
+ display: block;
+ margin: 0;
+ padding: 0;
+}
+
+.date h4{
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+
+}
+
+.policy-product{
+  padding: 60px 0;
+
+
+}
+section.policy-product{
+  margin-top: 9%;
+}
+
+
+.policy-img{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+
+}
+
+.policy-img img{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.policy-img img:hover{
+  transform:  scale(1.2);
+}
+
+.policy-p-card h2{
+  text-transform: capitalize;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 18px 0 10px;
+  cursor: pointer;
+  transition: all .3s ease;
+  color: #131313;
+}
+.policy-p-card h2:hover{
+  color: #ff4000;
+}
+.policy-p-card p{
+  color: #777;
+  line-height: 21px;
+  font-size: 14px;
+  transition: all .3s ease;
+  font-weight: 500;
+}
+
+.read-more{
+  color:  #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 0;
+  display: block;
+  background: #333;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.read-more i{
+  margin-left: 4px;
+}
+.read-more:hover{
+  background: #ff4000;
+  color: #fff;
+}
+
+.read-more:hover i
+{
+  margin-left: 6px;
+}
+
+
