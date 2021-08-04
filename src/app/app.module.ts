@@ -24,10 +24,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './home/home.component';
 
 import { AuthModule } from './auth/auth.module';
-import { DisplayComponent } from './CodeIngame/display/display.component';
-import { VoterComponent } from './CodeIngame/voter/voter.component';
-import { TransactionDetailsComponent } from './CodeIngame/transaction-details/transaction-details.component';
-import { LabelComponent } from './CodeIngame/label/label.component';
 import { ToolbarModule } from './toolbar/toolbar.module';
 import { HomeComponentModule } from './home-component/home-component.module';
 
@@ -38,10 +34,6 @@ import { HomeComponentModule } from './home-component/home-component.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    DisplayComponent,
-    VoterComponent,
-    TransactionDetailsComponent,
-    LabelComponent,
   ],
   imports: [
     BrowserModule,
